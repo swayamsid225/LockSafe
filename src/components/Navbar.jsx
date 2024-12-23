@@ -19,7 +19,7 @@ const Navbar = () => {
         </ul> */}
         <button className='text-black bg-sky-500 my-1 rounded-full flex justify-between items-center hover:bg-sky-700 ring-black ring-1'>
             <img className='w-10 p-1 px-2 py-1' src="icons/github.png" alt="github"/>
-            <a href="#" className='font-bold px-2'>GitHub</a>
+            <a href="https://github.com/swayamsid225/LockSafe" className='font-bold px-2'>GitHub</a>
         </button>
         </div>
         
