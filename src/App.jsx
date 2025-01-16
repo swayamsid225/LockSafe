@@ -3,6 +3,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import Manager from './components/Manager'
 import Navbar from './components/Navbar'
 import Footer from './components/Footer'
+import React from 'react';
+
 
 function App() {
 
