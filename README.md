@@ -1,8 +1,9 @@
-# React + Vite
+# Lock-Safe Password Manager
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Lock-Safe is a secure and easy-to-use password manager designed to help you store and organize your passwords safely. With encryption, password masking, and editing features, it's the best way to manage your passwords securely.
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features:
+- Secure encryption for password storage.
+- Easy editing and deleting of stored passwords.
+- Password masking to protect your credentials.
+- One-click login for fast and easy access.
