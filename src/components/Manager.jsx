@@ -5,15 +5,17 @@ import 'react-toastify/dist/ReactToastify.css';
 import { v4 as uuidv4 } from 'uuid';
 
 
+
 const Manager = () => {
   const ref = useRef()
   const passwordRef = useRef()
   const [form, setform] = useState({ site: "", username: "", password: "" })
 
   const [passwordArray, setpasswordArray] = useState([]);
+  const backendUrl = import.meta.env.BACKEND_URL;
 
   const getPasswords = async () => {
-    let req = await fetch("http://localhost:3000/")
+    let req = await fetch(backendUrl || "http://localhost:3000/")
     let passwords = await req.json()
     setpasswordArray(passwords);
     console.log(passwords);
@@ -44,7 +46,7 @@ const Manager = () => {
   
       // If the form has an id, it means you're editing a password, so delete the old one
       if (form.id) {
-        await fetch("http://localhost:3000/", {
+        await fetch(backendUrl || "http://localhost:3000/", {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ id: form.id })  
@@ -58,7 +60,7 @@ const Manager = () => {
       setpasswordArray([...passwordArray, { ...form, id }]);
   
       
-      await fetch("http://localhost:3000/", {
+      await fetch(backendUrl || "http://localhost:3000/", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...form, id })  
@@ -111,7 +113,7 @@ const Manager = () => {
 
       // Update the localStorage with the new password array
       // localStorage.setItem("password", JSON.stringify(updatedPasswordArray));
-      let res = await fetch("http://localhost:3000/",{method:"DELETE",headers:{"Content-Type" : "application/json"},
+      let res = await fetch(backendUrl || "http://localhost:3000/",{method:"DELETE",headers:{"Content-Type" : "application/json"},
         body: JSON.stringify({id})})
 
       
